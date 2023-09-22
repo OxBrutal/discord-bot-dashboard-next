@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       client_id: CLIENT_ID,
       redirect_uri: `${getAbsoluteUrl()}/api/auth/callback`,
       response_type: 'code',
-      scope: 'identify guilds',
+      scope: 'identify guilds guilds.join guilds.members.read',
       state: locale ?? '',
     });
 
